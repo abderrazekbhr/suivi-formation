@@ -1,9 +1,0 @@
-<div class="content" *ngIf="recomendedForDev.length>0">
-  <label  for="exampleFormControlInput1" class="form-label search-title">
-    Formations recommandées pour vous :
-  </label>
-  <div class="croussel">
-
-    <app-card [likeState]="false" *ngFor="let rF of recomendedForDev" [dataFormation]="rF"></app-card>
-  </div>
-</div>
