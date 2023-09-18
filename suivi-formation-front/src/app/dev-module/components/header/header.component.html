@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid nav">
+    <div class="navbar-brand">
+      <a class="stretched-link" [routerLink]="['/dev', 'accueil']">
+        <img
+          src="../../../../assets/icons/sofrecom.png"
+          alt="sofrecom"
+          loading="lazy"
+        />
+      </a>
+    </div>
+    <button
+      mat-button
+      [matMenuTriggerFor]="menu"
+      class="btn-menu"
+      aria-label="Example icon-button with a menu"
+    >
+
+    <span
+        style="color: white; font-size: 2.5em"
+        class="material-symbols-outlined"
+      >
+        person
+      </span>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item [routerLink]="['/dev', 'parametre']">
+        <div class="line">
+          <span class="material-symbols-outlined menu icon"> settings </span>
+          <span class="menu">Paramètres</span>
+        </div>
+      </button>
+      <button
+        mat-menu-item
+        (click)="deconnexion()"
+        [routerLink]="['/connexion']"
+      >
+        <div class="line">
+          <span class="material-symbols-outlined menu icon"> logout </span>
+          <span class="menu">Déconnexion</span>
+        </div>
+      </button>
+    </mat-menu>
+  </div>
+</nav>

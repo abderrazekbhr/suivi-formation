@@ -1,0 +1,39 @@
+<div class="content" data-aos="fade-left"
+  *ngIf="allInscriptions$ | async as devs">
+  <table class="table" *ngIf="devs.length>0">
+    <thead>
+      <tr>
+        <th style="margin-left: 0.5em;" scope="col">Nom</th>
+        <th scope="col">Prénom</th>
+        <th scope="col">Numéro</th>
+        <th scope="col">Email</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- <app-spinner *ngIf="spinner"></app-spinner> -->
+      <tr *ngFor="let dev of devs" class="example-button">
+        <td style="margin-left: 0.5em;">{{ dev.nom }}</td>
+        <td>{{ dev.prenom }}</td>
+        <td>{{ dev.numero }}</td>
+        <td>{{ dev.email }} </td>
+
+        <td>
+          <button mat-button class="action refuse" (click)="delete(dev.email)">
+            supprimer
+          </button>
+        </td>
+      </tr>
+    </tbody>
+    <button mat-button class="btn-export" [disabled]="devs.length==0" (click)="exportAsCSV()">
+      <span class="export-text">
+
+        Exporter
+      </span>
+    </button>
+
+  </table>
+
+  <app-empty-animation *ngIf="devs.length==0"></app-empty-animation>
+
+</div>

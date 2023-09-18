@@ -1,0 +1,16 @@
+<div class="termine">
+    <app-header></app-header>
+    <div class="content">
+      <app-sidebar></app-sidebar>
+      <div class="body">
+        <h3 data-aos="fade-down">
+          Formation terminé:
+      </h3>
+      <div class="termine-elt" data-aos="fade-up" *ngIf="endedFormations$ |async as ended">
+        <app-empty-box *ngIf="ended.length==0"></app-empty-box>
+        
+        <app-card [likeState]="false"  [inProgress]="true" *ngFor="let  f of ended" [dataFormation]="f"></app-card>
+    </div>
+      </div>
+    </div>
+</div>

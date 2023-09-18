@@ -1,0 +1,39 @@
+.croussel{
+    display: flex;
+    align-items: center;
+    padding:  2em;
+    overflow-x:scroll;
+    overflow-y:hidden;
+}
+app-card{
+    margin: auto 1em;
+}
+.search-title{
+    color: #000000;
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+ .croussel::-webkit-scrollbar {
+    height: 5px;
+    border-radius: 10px;
+  }
+  
+  /* Track */
+  .croussel::-webkit-scrollbar-track {
+    background: #f1f1f100; 
+    border-radius: 10px;
+
+  }
+   
+  /* Handle */
+  .croussel::-webkit-scrollbar-thumb {
+    background: #272727; 
+    border-radius: 6px;
+
+  }
+  
+  /* Handle on hover */
+  .croussel::-webkit-scrollbar-thumb:hover {
+    background: #111111; 
+  }

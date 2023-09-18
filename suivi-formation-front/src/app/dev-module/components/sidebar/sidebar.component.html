@@ -1,0 +1,63 @@
+<div class="side">
+  <h3 class="title">Mon espace</h3>
+
+  <li class="list" [routerLink]="['/dev', 'accueil']">
+    <span class="material-symbols-outlined"> home </span>
+    Accueil
+  </li>
+  <li class="list" [routerLink]="['/dev','mes-formation', 'favoris']">
+    <span class="material-symbols-outlined"> favorite </span>
+    Favoris
+    <!-- <span
+      *ngIf="numberFavorite$ | async as nbFavoris"
+      class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white"
+      class="badge"
+    >
+      {{ nbFavoris }}
+    </span> -->
+  </li>
+  <h3 class="title">Mes formations</h3>
+  <li class="list" [routerLink]="['/dev', 'mes-formation','assigne']">
+    <span class="material-symbols-outlined"> app_registration </span>
+    Formations assignées
+    <span
+      *ngIf="numberAssinged$ | async as numberAssinged"
+      class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white"
+      class="badge"
+    >
+      {{ numberAssinged }}
+    </span>
+  </li>
+  <li class="list" [routerLink]="['/dev', 'mes-formation','en-cours']">
+    <span class="material-symbols-outlined"> rotate_right </span>
+    Formations en cours
+    <!-- <span
+      *ngIf="numberEnCours$ | async as numberEnCours"
+      class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white"
+      class="badge"
+    >
+      {{ numberEnCours }}
+    </span> -->
+  </li>
+  <li class="list" [routerLink]="['/dev', 'mes-formation','termine']">
+    <span class="material-symbols-outlined"> check_small </span>
+    Formations terminées
+    <!-- <span
+      *ngIf="numberEnd$ | async as numberEnd"
+      class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white"
+      class="badge"
+    >
+      {{ numberEnd }}
+    </span> -->
+  </li>
+  <li class="list" [routerLink]="['/dev', 'mes-formation','certif']">
+    <span class="material-symbols-outlined" > verified_user </span>
+    Certification
+    <!-- <span
+      class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info text-white"
+      class="badge"
+    >
+      99+
+    </span> -->
+  </li>
+</div>

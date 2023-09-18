@@ -1,0 +1,102 @@
+
+.table{
+    border: 2px solid #000;
+
+}
+.menu
+{
+    height: 3em;
+    width: 3em;
+}
+.menu span{
+    display: grid;
+    margin: auto;
+}
+
+
+tbody{
+    height: 40vh;
+    display: block;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+tr{
+    display: grid;
+    grid-template-columns: 0.75fr  0.75fr  3fr 0.5fr;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #000;
+}
+td{
+    display: grid;
+    align-items: center;
+    padding:1em 0;
+}
+
+th
+{
+    padding: 1em 0;
+    margin: 0;
+}
+.search-title{
+    color: #000000;
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+.search{
+    padding: 0.5em;
+
+    display: flex;
+    border: 2px solid rgba(0, 0, 0);
+}
+.add-btn{
+    background-color: #32c832;
+    border: 2px solid #000;
+    border-radius: 0;
+}
+.form-control{
+    padding: 0.5em;
+    width: 75%;
+    border: none;
+    border-top-left-radius:2em ;
+    border-bottom-left-radius:2em;
+}
+.form-select{
+    border: 2px solid #000;
+    width:25%;
+    height: 2.5em  ;
+    font-size: 20px;
+    text-align: center;
+    color: #000;
+}
+.form-select option{
+    color: #000;
+    border: none;
+    background-color:#fff;
+    font-size: 18px;
+}
+tfoot{
+    display:flex;
+    justify-content: end;
+    padding: 1em;
+}
+.add-icon{
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+
+
+}
+
+.add-btn:hover{
+    background-color: #000;
+    color:white;
+    
+}
+.add-btn:active{
+    background-color: #ff7900;
+    color:#000;
+    scale:0.9;
+    
+}

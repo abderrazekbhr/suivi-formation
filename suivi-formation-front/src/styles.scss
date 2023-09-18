@@ -1,0 +1,80 @@
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+@font-face {
+    font-family: font;
+    src: url(assets/font/Lato/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: fontBold;
+  src: url(assets/font/Lato/Lato-Bold.ttf);
+}
+
+*{
+    font-family: font;
+  }
+body{
+    width: 100vw;
+    overflow-x: hidden;
+    background: #f1f1f1;
+    
+}
+#staticBackdrop{
+    z-index: 1;
+    background-color: #000;
+    position: relative;
+    width: 20vw;
+    border: #000;
+    height: 100vh;
+
+  }
+.offcanvas-backdrop{
+    position: absolute;
+    z-index: 0;
+    background-color: #3d3d3dc9;
+    height: 100%;
+}
+
+
+::placeholder { 
+    color: rgb(200, 200, 200);
+    opacity: 1; 
+  }
+  
+  :-ms-input-placeholder { 
+    color: rgb(200, 200, 200);
+  }
+  
+  ::-ms-input-placeholder {
+    color: rgb(200, 200, 200);
+  }
+  ::-webkit-scrollbar {
+    width: 6px;
+    border-radius: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f100; 
+    border-radius: 10px;
+
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #272727; 
+    border-radius: 6px;
+
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #111111; 
+  }
+  button:disabled,
+button[disabled]{
+  background-color:#000;
+  color: #666666;
+}
+.primary{
+   
+    color: #fff;
+}

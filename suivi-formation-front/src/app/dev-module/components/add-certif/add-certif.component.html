@@ -1,0 +1,119 @@
+<form #certif="ngForm" class="body">
+    <h5 class="modal-title" id="staticBackdropLabel">Nouvelle certification</h5>
+    <hr />
+    <table class="table">
+      <tbody>
+        <tr>
+          <td>
+            <span class="input-group-text">Nom de certif:</span>
+          </td>
+          <td>
+            <input
+              type="text"
+              [ngClass]="{'is-invalid': cetifName.invalid || cetifName.touched,'is-valid': cetifName.valid }"
+              class="form-control inputs"
+              name="cetifName"
+              ngModel
+              #cetifName="ngModel"
+              required
+              aria-describedby="basic-addon3"
+              placeholder="Nom de certification"
+            />
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <td>
+            <span class="input-group-text">Valable de:</span>
+          </td>
+          <td>
+            <input
+              type="date"
+              class="form-control inputs"
+              ngModel
+              #validationDateStart="ngModel"
+              name="validationDateStart"
+              required
+              [ngClass]="{'is-invalid': validationDateStart.invalid || validationDateStart.touched,'is-valid': validationDateStart.valid }"
+              aria-describedby="basic-addon3"
+            />
+          </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="input-group-text">Valable à:</span>
+            </td>
+            <td>
+              <input
+                type="date"
+                class="form-control inputs"
+                ngModel
+                #validationDateEnd="ngModel"
+                name="validationDateEnd"
+                required
+                [ngClass]="{'is-invalid': validationDateEnd.invalid || validationDateEnd.touched,'is-valid': validationDateEnd.valid }"
+                min="{{ validationDateStart.value | date: 'yyyy-MM-dd' }}"
+                aria-describedby="basic-addon3"
+              />
+            </td>
+          </tr>
+      
+        
+      <tr>
+        <td>
+          <span class="input-group-text">Formation terminé: </span>
+        </td>
+        <td>
+          <select
+            name="idFormation"
+            ngModel
+            required
+            #idFormation="ngModel"
+            *ngIf="endedFormations$ | async as endedFormations"
+            class="form-select inputs"
+            [ngClass]="{'is-invalid': idFormation.invalid || idFormation.touched,'is-valid': idFormation.valid}"
+          >
+            <option
+              *ngFor="let formation of endedFormations"
+              [value]="formation.idFormation"
+            >
+              {{ formation.nomFormation }}
+            </option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Preuve de certif:</td>
+        <td class="mb-3">
+          <input 
+          class="form-control" type="file"
+          name="photo"
+          ngModel
+          
+          [ngClass]="{'is-invalid': photo==null,'is-valid': photo!=null}"
+          accept="image/*"
+          (change)="onFileSelected($event)"
+          id="formFile"
+          required />
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    <button
+      [disabled]="certif.invalid"
+      mat-flat-button
+      class="add-btn"
+      style="border-radius: 0"
+      (click)="addCertif(certif)"
+      color="primary"
+    >
+      Ajout
+    </button>
+  
+    
+  </form>
+  
+  <!-- <div *ngIf="spinner" class="spinner">
+    <app-spinner style="position: absolute;top: 50%;left: 50%;"></app-spinner>
+  </div> -->

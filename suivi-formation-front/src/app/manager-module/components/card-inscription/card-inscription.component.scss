@@ -1,0 +1,43 @@
+.line{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid #000;
+    padding: 1em ;
+    margin: 1em 2em;
+    width: 40vw;
+    align-items: center;
+    
+}
+
+
+.data{
+    display:grid;
+    align-items: center;
+    width: 70%;
+}
+
+p{
+    margin: 0;
+}
+.action{
+    border: 2px solid #000;
+    border-radius: 0;
+    color: #000;
+}
+.accept{
+    background-color: #32c832;
+}
+.actions{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+
+}
+.refuse{
+    background-color: #cd3c14;
+    
+}
+.action:hover{
+    background-color: #000;
+    color: white;
+}

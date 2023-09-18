@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg bg-dark">
+  <div class="container-fluid nav">
+    <div class="navbar-brand">
+      <a class="stretched-link" [routerLink]="['/manager', 'accueil']">
+        <img src="../../../../assets/icons/sofrecom.png" alt="sofrecom" loading="lazy" />
+      </a>
+    </div>
+    <ul class="navbar-nav">
+      <li>
+        <a [ngClass]="{ 'url-active': accueil }" (click)="toAccueil()" aria-current="page"
+          [routerLink]="['/manager', 'accueil']">Accueil</a>
+      </li>
+      <li >
+        <a (click)="toMembers()" [ngClass]="{ 'url-active': members }" [routerLink]="['/manager', 'members']">Membres</a>
+      </li>
+    </ul>
+    <button mat-button [matMenuTriggerFor]="menu" class="btn-menu" aria-label="Example icon-button with a menu">
+      <span style="font-size: 2.5em" class="material-symbols-outlined">
+        person
+      </span>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item class="line" [routerLink]="['/dev', 'setting']">
+        <div class="line">
+          <span style="margin-right: 0.5em" class="material-symbols-outlined menu icon">
+            settings
+          </span>
+          <span class="menu">Paramètre</span>
+        </div>
+      </button>
+      <button mat-menu-item (click)="deconnexion()" [routerLink]="['/connexion']">
+        <div class="line">
+          <span style="margin-right: 0.5em" class="material-symbols-outlined menu icon">
+            logout
+          </span>
+          <span class="menu">Déconnexion</span>
+        </div>
+      </button>
+    </mat-menu>
+  </div>
+</nav>

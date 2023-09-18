@@ -1,0 +1,28 @@
+<div
+  data-aos="fade-left"
+  data-aos-anchor="#example-anchor"
+  data-aos-offset="500"
+  data-aos-duration="500"
+  class="line"
+>
+  <div class="data" dat>
+    <p>
+      {{ nom +" "+ prenom }}
+    </p>
+
+    <p>
+      {{ email }}
+    </p>
+    <p>
+      {{ numero }}
+    </p>
+  </div>
+  <div class="actions">
+    <button mat-button class="action accept" (click)="accept()">
+      Accepter
+    </button>
+    <button mat-button class="action refuse" (click)="refuse()">
+      Refuser
+    </button>
+  </div>
+</div>

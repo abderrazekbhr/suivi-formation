@@ -1,0 +1,77 @@
+<div class="acceuil">
+  <app-header></app-header>
+
+  <div class="content">
+    <app-sidebar></app-sidebar>
+    <div class="body">
+      <div class="search-bar">
+        <div data-aos="fade-down" class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label search-title">
+            Rechercher des formations:
+          </label>
+          <div class="search">
+            <input
+              (keyup.enter)="searchBy(filter.value, text.value)"
+              type="text"
+              [(ngModel)]="searchText"
+              ngModel
+              class="form-control"
+              #text="ngModel"
+              id="exampleFormControlInput1"
+              placeholder="je recherche une formation par:Titre ,Compétances ...."
+            />
+            <select
+              #filter
+              [(ngModel)]="filterType"
+              class="form-select"
+              aria-label="Default select example"
+            >
+              <option selected value="Nom">Nom</option>
+              <option value="Description">Description</option>
+              <option value="Entite Formatirce">Entité formatrice</option>
+            </select>
+          </div>
+          <mat-chip-listbox
+            [(ngModel)]="chipsValue"
+            (click)="filterBy()"
+            class="mt-3 mb-3"
+          >
+            <mat-chip-option value="web">Développement Web </mat-chip-option>
+            <mat-chip-option value="mobile"
+              >Développement Mobile
+            </mat-chip-option>
+            <mat-chip-option value="bd"> Bases de données</mat-chip-option>
+            <mat-chip-option value="reseau"
+              >Réseaux et Sécurité
+            </mat-chip-option>
+            <mat-chip-option value="cloud">Cloud Computing </mat-chip-option>
+            <mat-chip-option value="ia">IA </mat-chip-option>
+            <mat-chip-option value="devops">DevOps </mat-chip-option>
+            <mat-chip-option value="gestion de projets"
+              >Gestion de Projets
+            </mat-chip-option>
+          </mat-chip-listbox>
+        </div>
+        <div data-aos="fade-up" class="formations">
+          <div class="recommender" >
+            <app-croussel></app-croussel>
+          </div>
+          <label   class="form-label search-title mb-3 mt-4">
+            Les formations:
+          </label>
+          <app-spinner *ngIf="spinner"></app-spinner>
+          <div  *ngIf="!spinner" class="fomation-grid" 
+          >
+            <app-empty-search *ngIf="changeDataValue.length==0"></app-empty-search>
+            <app-card
+              
+              (favoriteEvent)="reloadContent($event)"
+              *ngFor="let elt of changeDataValue"
+              [dataFormation]="elt"
+            ></app-card>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

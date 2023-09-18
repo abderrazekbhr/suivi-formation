@@ -1,0 +1,44 @@
+    <table class="table" data-aos="fade-up">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">Nom</th>
+          <th scope="col">Debut</th>
+          <th scope="col">Durée</th>
+          <th scope="col">Entité Formatrice</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody *ngIf="formationPreInscris$ | async as formations">
+        <!-- <app-spinner *ngIf="spinner"></app-spinner> -->
+        <tr
+          *ngFor="let formation of formations"
+          class="example-button"
+        >
+          <td>
+            <img
+              width="30"
+              height="30"
+              style="margin-left:0.5em ;"
+              src="{{
+                '../../../../../../assets/icons/categorie/' +
+                  formation.categorie +
+                  '.png'
+              }}"
+              alt="{{ formation.categorie }}"
+            />
+          </td>
+          <td>{{ formation.nomFormation }}</td>
+          <td>{{ formation.dateDebut }}</td>
+          <td>{{ formation.duree }} Jour(s)</td>
+          <td>{{ formation.entiteFormatrice }}</td>
+  
+          <td>
+            <button *ngIf="formation.idFormation" mat-button class="action refuse" (click)="delete(formation.idFormation)">
+              supprimer
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  

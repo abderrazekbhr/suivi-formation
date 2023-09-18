@@ -1,0 +1,148 @@
+
+.table{
+    border: 2px solid #000;
+    
+}
+tbody{
+    height: 30vh;
+    display: block;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+tr{
+    display: grid;
+    grid-template-columns:0.75fr 1.25fr 1.25fr 1fr 0.75fr 1.5fr 1fr 0.5fr;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #000;
+    padding: 0;
+}
+td{
+    display: grid;
+    align-items: center;
+    padding:1em 0;
+    background-color: transparent;
+    margin: 0;
+}
+th
+{
+    padding: 0;
+    margin: 0;
+}
+.search-title{
+    color: #000000;
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+.menu
+{
+    height: 3em;
+    width: 3em;
+}
+.menu span{
+    display: grid;
+    margin: auto;
+}
+.search{
+    padding: 0.5em;
+
+    display: flex;
+    border: 2px solid rgba(0, 0, 0);
+}
+
+.form-control{
+    padding: 0.5em;
+    width: 75%;
+    border: none;
+    border-top-left-radius:2em ;
+    border-bottom-left-radius:2em;
+}
+.form-select{
+    border: 2px solid #000;
+    width:25%;
+    height: 2.5em  ;
+    font-size: 20px;
+    text-align: center;
+    color: #000;
+}
+.form-select option{
+    color: #000;
+    border: none;
+    background-color:#fff;
+    font-size: 18px;
+}
+
+mat-spinner{
+    display:grid;
+    z-index: 1000;
+    margin:2em auto;
+    position: absolute;
+}
+img{
+    margin-left: 1em;
+}
+.add-btn{
+    background-color: #32c832;
+    border: 2px solid #000;
+    border-radius: 0;
+}
+tfoot{
+    display:flex;
+    justify-content: end;
+    padding: 1em;
+}
+.add-icon{
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+
+
+}
+
+.add-btn:hover{
+    background-color: #000;
+    color:white;
+    
+}
+.add-btn:active{
+    background-color: #ff7900;
+    color:#000;
+    scale:0.9;
+    
+}
+
+.details-btn{
+    background-color: #0dcaf0;
+    border-radius: 0;
+    color: #fff;
+}
+
+.edit-btn{
+    background-color: #ff7900;
+    color: #fff;
+    border-radius: 0;
+}
+
+.delete-btn{
+    color: #fff;
+    background-color: #cd3c14;
+    border-radius: 0;
+}
+
+.confirm-btn{
+    color: #fff;
+    background-color: #32c832;
+    border-radius: 0;
+}
+.dropdown-item{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.material-symbols-outlined{
+    margin: auto 0.5em;
+}
+.confirmed{
+    background-color: #e3e3e3;
+}

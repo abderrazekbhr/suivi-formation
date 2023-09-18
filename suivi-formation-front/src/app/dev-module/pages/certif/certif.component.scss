@@ -1,0 +1,60 @@
+.en-cours{
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.content{
+    display: flex;
+    height: 100%;
+    
+}
+.body{
+    height: 85vh;
+    width: 80vw;
+    margin: 1em auto;
+    background-color: #fff;
+    padding:  2em;
+}
+
+.description{
+    margin: 1em auto;
+}
+h3{
+    font-size: 2.1em;
+    margin: 0em;
+    height: 1em;
+    text-decoration:underline;
+}
+.btn-inscription{
+    display: grid;
+    margin: 1em auto;
+    height: 3.5em;
+    border: 2px solid #000;
+    border-radius: 0;
+    width: 20vw;
+    background-color:#ff7900;
+    font-size: 18px;
+}
+.en-cours-elt{
+    display: flex;
+    height: 70vh;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+}
+app-card{
+    margin: auto 1em;
+}
+.btn-add-badge{
+    display: flex;
+    float: right;
+    background-color: #32c832;
+    border: 2px solid #000;
+    border-radius: 0;
+    height: 3.5em;
+}
+.material-symbols-outlined{
+    display: grid;
+    margin: auto;
+}

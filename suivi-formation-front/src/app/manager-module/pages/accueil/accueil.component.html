@@ -1,0 +1,38 @@
+<div class="accueil">
+  <app-header></app-header>
+
+  <div class="content">
+    <ul data-aos="fade-down" class="nav nav-tabs mt-2 mb-2">
+      <li class="nav-item">
+        <button
+          (click)="changeTabToFormation()"
+          class="nav-link"
+          [ngClass]="{ active: formationEntiteTabsState }"
+          aria-current="page"
+        >
+          Formation
+        </button>
+      </li>
+      <li class="nav-item">
+        <button
+          (click)="changeTabToEntite()"
+          class="nav-link"
+          [ngClass]="{ active: !formationEntiteTabsState }"
+          aria-current="page"
+        >
+          Entite Formatrice
+        </button>
+      </li>
+    </ul>
+    <app-table-formation
+      *ngIf="formationEntiteTabsState"
+      data-aos="fade-up"
+    ></app-table-formation>
+    <app-table-entite
+      *ngIf="!formationEntiteTabsState"
+      data-aos="fade-up"
+    ></app-table-entite>
+
+    
+  </div>
+</div>

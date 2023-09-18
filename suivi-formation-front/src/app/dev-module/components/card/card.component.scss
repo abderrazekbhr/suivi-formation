@@ -1,0 +1,75 @@
+.card{
+    background: #FFF;
+    box-shadow: 2px 2px 5px rgb(170, 170, 170);
+    transition-duration: 0.5s;
+    border: none;
+    z-index: 0;
+    width: 15vw;
+    height: 47vh;
+    margin: 1em auto;
+}
+.card:hover{
+    transform:translateX(20)
+
+}
+.card-img-top{
+    padding: 1em;
+    height: 20vh;
+}
+.catergorie{
+    display: flex;
+}
+.hearder{
+    align-items: center;
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+
+
+}
+.time{
+    display: grid;
+    margin-left: 0.75em;
+}
+
+.like{
+    display: flex;
+    
+    border: none;
+    align-items: center;
+
+}
+.duration{
+    display: flex;
+    align-items: center;
+}
+
+.btn-colored{
+    background-color:#f16e00;
+}
+
+.colored{
+    color:  black;
+
+}
+
+.like-duration{
+    display: flex;
+    margin: 1em auto;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.like span{
+    display: grid;
+    margin: auto;
+}
+.spinner{
+    display: block;
+    z-index: 10000;
+}
+.progress{
+    background-color: #FFF;
+    margin: 1em auto;
+    display:grid;
+}

@@ -1,0 +1,20 @@
+<div class="assigne">
+    <app-header></app-header>
+    <div class="content">
+      <app-sidebar></app-sidebar>
+      <div class="body">
+        <ul class="nav nav-tabs" data-aos="fade-down">
+          <li class="nav-item"> 
+            <a class="nav-link"  (click)="changeToPreInscription()" [ngClass]="{'active': sider}" >Pré-Inscription</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="changeToConfirme()" [ngClass]="{'active': !sider}">Inscription</a>
+          </li>
+         
+        </ul>
+        <app-preinscription  data-aos="fade-up" *ngIf="sider"></app-preinscription>
+        <app-confirme  *ngIf="!sider"></app-confirme>
+      </div>
+    </div>
+</div>
+  

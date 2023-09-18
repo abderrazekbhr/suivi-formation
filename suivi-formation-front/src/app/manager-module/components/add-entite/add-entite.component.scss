@@ -1,0 +1,79 @@
+
+.inputs{
+    border: 2px  solid #000;
+}
+.body{
+    padding: 1em 2em;
+}
+
+.table{
+    border:none;
+}
+
+tr{
+    border:none;
+    margin: 3em 0;
+}
+
+td{
+    margin: 0;
+    padding: 0;
+}
+.tbody{
+    height: 100vh;
+}
+.form-select{
+    display: block;
+    padding: 0.5;
+    height: 3em;
+    width: 100%;
+    border: 2px solid #000;
+}
+
+.textarea{
+
+    resize: none;
+    height: 30vh;
+    width:30vw;
+}
+input-group-text,span{
+    font-weight: bolder;
+    padding: 0;
+    margin: 1em 0;
+}
+
+.add-btn{
+    display: grid;
+    margin:1em auto;
+    height: 3.5em;
+    border:2px solid #000;
+    width: 15vw;
+    color: #000;
+
+}
+.inputs{
+    margin: 1em 0;
+}
+button:disabled,
+button[disabled]{
+  background-color:#000;
+  color: #666666;
+}
+button{
+}
+.orange{
+    color: rgb(255, 140, 0);
+}
+.yellow{
+    color: rgb(201, 174, 0);
+}
+.green{
+    color: rgb(88, 195, 0);
+}
+.is-invalid{
+    border:solid 2px #cd3c14;;   
+   }
+    
+   .is-valid{
+       border: 2px solid #32c832;
+   }

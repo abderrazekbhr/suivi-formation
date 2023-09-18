@@ -1,0 +1,141 @@
+
+.content{
+    height: 100vh;
+    overflow-y: hidden;
+
+}
+.table{
+    border: 2px solid #000;
+    border: 2px solid #000;
+    width: 50vw;
+    height: 40vh;
+}
+    
+
+tbody{
+    height: 40vh;
+    display: block;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+tr{
+    display: grid;
+    grid-template-columns:0.3fr 1fr 1fr 1fr 1.7fr 0.5fr;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #000;
+}
+td{
+    display: grid;
+    align-items: center;
+}
+.search-bar{
+    margin:  auto;
+    width: 50vw;
+}
+
+.form-control{
+    border: 2px solid #000;
+    height: 3em;
+}
+
+.btn-primary{
+    display: grid;
+    margin: 1em auto;
+}
+.operation{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.members{
+    padding: 1em 1.5em;    
+    height:100%;
+    background-color: #000;
+    overflow-y: scroll;
+    color: white;
+    overflow-x: hidden;
+
+}
+.email{
+    margin: 1em auto;
+}
+
+.list{
+    display: block;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+.spinner{
+    display: grid;
+    margin: 1em auto;
+}
+
+.container{
+    background-color: white;
+    margin: 1em auto;
+    padding: 2em ;
+    height: 83vh;
+}
+
+.search-title{
+    color: #000000;
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+.search{
+    padding: 0.5em;
+
+    display: flex;
+    border: 2px solid rgba(0, 0, 0);
+}
+.body{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+.add-btn{
+    background-color: #32c832;
+    border: 2px solid #000;
+    border-radius: 0;
+}
+tfoot{
+    display:flex;
+    justify-content: end;
+    padding: 1em;
+}
+.add-icon{
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+}
+
+.add-btn:hover{
+    background-color: #000;
+    color:white;
+    
+}
+.add-btn:active{
+    background-color: #ff7900;
+    color:#000;
+    scale:0.9;
+    
+}
+button:disabled,
+button[disabled]{
+  background-color:#000;
+  color: #666666;
+}
+.spinner{
+    width: 100vw;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    position: absolute;
+    background-color: #0000007a;
+    z-index: 1000;
+}
